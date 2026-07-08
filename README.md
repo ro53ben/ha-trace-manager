@@ -2,6 +2,7 @@
 Trace Manager integration for Home Assistant is a feature that makes it easier to increase/decrease trace debugging of specifed automations/scripts. 
 
 The idea is that you can go to Developer Tools...Actions and choose the "Set Stored Traces" option. From here you can pick one of more Automation/Script entities, set a target number and click the action button. The YAML for each entity will have the required number of traces added/updated.
+<img width="1198" height="881" alt="image" src="https://github.com/user-attachments/assets/b390348e-518e-47da-83d3-f7fe26098350" />
 
 HA Trace Manager removes the need to manually edit the YAML for each entity, one at a time.
 

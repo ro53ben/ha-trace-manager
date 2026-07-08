@@ -18,11 +18,18 @@ Using the entity, you will be able to change the number of traces for:
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-Open HACS → Integrations → ⋮ → Custom Repositories
-Add: https://github.com/ro53ben/ha-trace-manager 
-Install "HA Trace Manager"
-Restart Home Assistant
-Settings → Devices & Services → Add Integration → "HA Trace Manager"
+1) Open HACS → Integrations → ⋮ → Custom Repositories
+
+2) Add: https://github.com/ro53ben/ha-trace-manager 
+
+3) Install "HA Trace Manager"
+
+4) Add the following line to your configuration.yaml
+
+trace_manager:
+
+5) Restart Home Assistant
+
 
 ### Manual
 

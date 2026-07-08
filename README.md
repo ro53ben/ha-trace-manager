@@ -16,17 +16,17 @@ Using the entity, you will be able to change the number of traces for:
 
 ### HACS
 
-1) Open HACS → Integrations → ⋮ → Custom Repositories
+1) Open HACS → ⋮ → Custom Repositories
 
 2) Add: https://github.com/ro53ben/ha-trace-manager 
 
-3) Install "HA Trace Manager"
+3) Install "Trace Manager"
 
-4) Add the following line to your configuration.yaml
+4) Restart Home Assistant if prompted
 
-trace_manager:
+5) Settings...Ingregations...Add Integation...Trace Manager
 
-5) Restart Home Assistant
+4) Restart Home Assistant if prompted
 
 
 ### Manual

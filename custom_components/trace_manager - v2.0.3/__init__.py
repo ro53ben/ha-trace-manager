@@ -1,7 +1,7 @@
 import logging
 from ruamel.yaml import YAML
 from homeassistant.core import HomeAssistant, ServiceCall
-from homeassistant.helpers import entity_registry as er, service
+from homeassistant.helpers import entity_registry as er
 from homeassistant.config_entries import ConfigEntry
 
 DOMAIN = "trace_manager"
@@ -46,15 +46,16 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         return False
 
     async def handle_set_traces(call: ServiceCall):
-        # Automatically resolve entities, areas, labels, and devices
-        resolved_entities = await service.async_extract_entity_ids(hass, call)
-        
+        entity_ids = call.data.get("entity_id", [])
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+            
         traces = call.data.get("traces", 50)
         registry = er.async_get(hass)
         auto_ids = []
         script_keys = []
         
-        for eid in resolved_entities:
+        for eid in entity_ids:
             if eid.startswith("automation."):
                 entry_reg = registry.async_get(eid)
                 if entry_reg and entry_reg.unique_id:
@@ -81,5 +82,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     return True
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Unload a config entry."""
     hass.services.async_remove(DOMAIN, "set_stored_traces")
     return True

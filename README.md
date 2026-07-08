@@ -16,8 +16,6 @@ Using the entity, you will be able to change the number of traces for:
 
 ### HACS
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
-
 1) Open HACS → Integrations → ⋮ → Custom Repositories
 
 2) Add: https://github.com/ro53ben/ha-trace-manager 

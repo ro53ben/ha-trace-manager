@@ -24,7 +24,7 @@ Using the entity, you will be able to change the number of traces for:
 
 4) Restart Home Assistant if prompted
 
-5) Settings...Ingregations...Add Integation...Trace Manager
+5) Settings...Integrations...Add Integration...Trace Manager
 
 4) Restart Home Assistant if prompted
 

@@ -2,11 +2,11 @@
   "domain": "trace_manager",
   "name": "Trace Manager",
   "codeowners": ["@ro53ben"],
-  "version": "2.1.1",
+  "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/ro53ben/ha-trace-manager",
   "integration_type": "helper",
+  "iot_class": "local_push",
   "requirements": ["ruamel.yaml"],
-  "config_flow": true,
-  "iot_class": "local_push"
+  "version": "2.1.1"  
 }

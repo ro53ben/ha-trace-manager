@@ -7,6 +7,7 @@
   "documentation": "https://github.com/ro53ben/ha-trace-manager",
   "integration_type": "helper",
   "iot_class": "local_push",
+  "issue_tracker": "https://github.com/ro53ben/ha-trace-manager/issues",
   "requirements": ["ruamel.yaml"],
   "version": "2.1.1"  
 }

@@ -47,7 +47,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     async def handle_set_traces(call: ServiceCall):
         # Automatically resolve entities, areas, labels, and devices
-        resolved_entities = await service.async_extract_entity_ids(hass, call)
+        resolved_entities = await service.async_extract_entity_ids(call)
         
         traces = call.data.get("traces", 50)
         registry = er.async_get(hass)
